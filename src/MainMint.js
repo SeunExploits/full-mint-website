@@ -3,7 +3,7 @@ import { ethers, BigNumber } from 'ethers';
 import { Box, Button, Flex, Input, Text } from '@chakra-ui/react';
 import roboPunksNFT from './RoboPunksNFT.json';
 
-const roboPunksNFTAddress = "0x5692F4A141Ba0316Df8f412D174C41941de890A2";
+const roboPunksNFTAddress = "0xD540C16FE5C5142b44286bA6D1CF97BaAF079341";
 
 const MainMint = ({ accounts, setAccounts }) => {
 const {mintAmount, setMintAmount} = useState(1);
@@ -66,13 +66,7 @@ return (
                 fontFamily= 'inherit'
                 padding= '15px'
                 marginTop='10px'
-            onClick={handleDecrement}
-
-
-            >
-             -
-             
-              </button>
+            onClick={handleDecrement}>-</button>
             <input 
                 readOnly
                 fontFamily='inherit'
@@ -83,8 +77,7 @@ return (
                 paddingLeft= '19px'
                 marginTop='10px'
                  type='number'
-                value = {mintAmount}
-                 />
+                value = {mintAmount}/>
             <button
              backgroundColor = '#06517D'
                 borderRadius= '5px'
@@ -95,12 +88,7 @@ return (
                 padding= '15px'
                 marginTop='10px'
             
-             onClick={handleIncrement}
-             
-             >
-              +
-              
-               </button>
+             onClick={handleIncrement}>+</button>
         </flex>
             <button
              backgroundColor = '#065170'
@@ -112,11 +100,7 @@ return (
                 padding= '15px'
                 marginTop='10px'
             
-             onClick = {handleMint}
-             
-             >
-             
-            Mint now</button>
+             onClick = {handleMint}>Mint now</button>
         </div>
 
         ) : (

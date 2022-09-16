@@ -1,4 +1,4 @@
-require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-waffle");
 require('@nomiclabs/hardhat-etherscan');
 const dotenv = require("dotenv");
 

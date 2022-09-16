@@ -17,41 +17,20 @@ const NavBar = ({ accounts, setAccounts }) => {
         }
     }
 
-    return (
+    return(
         <Flex justify= 'space-between' align= 'center' padding= '30px'>
-        { /*left side - Social media Icons */}
-            <Flex justify= 'space-around' width = '40%' padding= '0 75px'>
-                <link href ='https://www.facebook.com'>
-                    <image src= {Facebook} boxSize='42px' margin='0 15px' />
-                </link>
-                <link href ='https://www.twitter.com'>
-                    <image src= {Twitter} boxSize='42px' margin='0 15px' />
-                </link>
-                <link href ='https://www.gmail.com'>
-                    <image src= {Email} boxSize='42px' margin='0 15px' />
-                </link>
-            </Flex>
-           
+{/*lEFT SIDE OF THE NAVBAR*/}
+<div>Facebook</div>
+<div>Twitter</div>
+<div>Email</div>
 
-        { /*Right side - Sections and Connect */}
-            <Flex
-            justify='space-around'
-            align='center'
-            width= '40%'
-            padding= '30px'
+{/*RIGHT SIDE - SECTIONS AND CONNECT*/}
+<div>About</div>
+<div>Mint</div>
+<div>Team</div>
 
-            > 
-
-            <Box margin= '0 15px'>About</Box>
-            <Spacer/>
-            <Box margin= '0 15px'>Mint</Box>
-            <Spacer/>
-            <Box margin= '0 15px'>Team</Box>
-            <Spacer/>
-
-
-            { /*Connected */}
-            {isConnected ? (
+{/*CONNECT*/}
+{isConnected ? (
                 <Box margin= '0 15px'>Connected</Box>
             ) : (
                 <button
@@ -67,11 +46,12 @@ const NavBar = ({ accounts, setAccounts }) => {
                 >
                 Connect
                 </button>
-            )}
+)}
+    
+    </Flex>
 
-            </Flex>
-        </Flex>
-    );
+    )
+   
 };
 
 export default NavBar;
